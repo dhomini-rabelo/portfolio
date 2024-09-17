@@ -1,4 +1,3 @@
-import DevImg from './DevImg';
 import Image from 'next/image';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
@@ -85,20 +84,6 @@ const qualificationData = [
 const skillData = [
   {
     title: 'skills',
-    data: [
-      {
-        name: 'HTML, CSS',
-      },
-      {
-        name: 'Front-end Development',
-      },
-      {
-        name: 'Javascript, PHP',
-      },
-      {
-        name: 'Back-end Development',
-      },
-    ],
   },
   {
     title: 'tools',
@@ -120,30 +105,74 @@ const skillData = [
 ];
 
 const About = () => {
-  const getData = (arr, title) => {
-    return arr.find((item) => item.title === title);
-  };
-
   return (
     <section className='xl:h-[860px] pb-12 xl:py-24'>
-      <div className='container mx-auto'>
+      <div className='container mx-auto px-48'>
         <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
           About me
         </h2>
-        <div className='flex flex-col xl:flex-row'>
-          {/* image */}
-          <div className='hidden xl:flex flex-1 relative'>
-            <DevImg
-              containerStyles='bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative'
-              imgSrc='/about/developer.png'
-            />
+        <div className='grid grid-cols-1 px-16 xl:grid-cols-5 xl:px-0 gap-x-8'>
+          <div
+            className='col-span-3'
+          >
+            <h3 className='h3 mb-4 text-center'>
+              Introduction
+            </h3>
+            <p className='text-justify py-4'>
+              I started programming in 2018 in technical high school, and I have been working as a programmer since the end of 2021. I have
+              always been passionate about technology and programming, initially fascinated by the power that programming alone gives us,
+              and later by the way we design, build, and maintain software, applying the necessary business rules and impacting our client's
+              life. I am also driven by challenges, work, and goals, and I am constantly developing myself with projects and courses to become
+              a more well-qualified and prepared professional, in addition to adding knowledge to my team.
+            </p>
+            <div className='flex flex-col gap-y-2'>
+              <div className='text-primary'>Languages</div>
+              <div className='border-b border-border'></div>
+              <div>
+                English, Portuguese.
+              </div>
+            </div>
           </div>
-          {/* tabs */}
-          <div className='flex-1'>
-            <Tabs defaultValue='personal'>
-              <TabsList className='w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none'>
+          <div className='col-span-2 text-justify'>
+            <h3 className='h3 mb-4 text-center'>
+              Skills
+            </h3>
+            <div className='border-b border-border mb-4'></div>
+            <div>
+              <strong className='text-foreground pr-1 inline-block'>Client Side:</strong>
+              <span className='subtitle'>
+                Javascript, Typescript, React, React Native, Next, Axios, Zod, Zustand, react-hook-form,
+                Tailwind, and Styled-components.
+              </span>
+            </div>
+            <div>
+              <strong className='text-foreground pr-1 inline-block'>Server Side:</strong>
+              <span className='subtitle'>
+                Python, Typescript, Node, Nest, Express, Flask, FastAPI, Django, Redis, Mongo, Postgres, Pytest, Jest, Docker,
+                and AWS (DynamoDB, SQS, Cognito, Lambda, etc.).
+              </span>
+            </div>
+            <div>
+              <strong className='text-foreground pr-1 inline-block'>Concepts:</strong>
+              <span className='subtitle'>
+                Clean Code, SOLID, Design Patterns, DDD, Clean
+                Arch, and TDD.
+              </span>
+            </div>
+            <div>
+              <strong className='text-foreground pr-1 inline-block'>Soft Skills:</strong>
+              <span className='subtitle'>
+                Adaptability, Agile methodology, Analytical thinking, Communication, Fast learning, High code standardization,
+                Organization, Proactivity, and Team management.
+              </span>
+            </div>
+            {/* <Tabs defaultValue='skills'> */}
+            {/* <TabsList className='w-full mx-auto grid xl:grid-cols-2 xl:max-w-[520px] xl:border dark:border-none'>
                 <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>
                   Personal Info
+                </TabsTrigger>
+                <TabsTrigger className='w-[162px] xl:w-auto' value='skills'>
+                  Skills
                 </TabsTrigger>
                 <TabsTrigger
                   className='w-[162px] xl:w-auto'
@@ -151,14 +180,11 @@ const About = () => {
                 >
                   Qualifications
                 </TabsTrigger>
-                <TabsTrigger className='w-[162px] xl:w-auto' value='skills'>
-                  Skills
-                </TabsTrigger>
-              </TabsList>
-              {/* tabs content */}
-              <div className='text-lg mt-12 xl:mt-8'>
-                {/* personal */}
-                <TabsContent value='personal'>
+              </TabsList> */}
+            {/* tabs content */}
+            {/* <div className='text-lg mt-4 xl:mt-8'> */}
+            {/* personal */}
+            {/* <TabsContent value='personal'>
                   <div className='text-center xl:text-left'>
                     <h3 className='h3 mb-4'>
                       Unmatched Service Quality for Over 10 Years
@@ -168,7 +194,6 @@ const About = () => {
                       cutting-edge technology, delivering dynamic and engaging
                       user experiences.
                     </p>
-                    {/* icons */}
                     <div className='grid xl:grid-cols-2 gap-4 mb-12'>
                       {infoData.map((item, index) => {
                         return (
@@ -182,23 +207,66 @@ const About = () => {
                         );
                       })}
                     </div>
-                    {/* languages */}
                     <div className='flex flex-col gap-y-2'>
                       <div className='text-primary'>Language Skill</div>
                       <div className='border-b border-border'></div>
                       <div>English, French, Spanish, Italian</div>
                     </div>
                   </div>
-                </TabsContent>
-                {/* qualifications */}
-                <TabsContent value='qualifications'>
-                  <div>
+                </TabsContent> */}
+            {/* qualifications */}
+            {/* skills */}
+            {/* <div className='text-center xl:text-left'> */}
+            {/* skills */}
+            {/* <div className='mb-16'> */}
+            {/* <h4 className='text-xl font-semibold mb-2'>Skills</h4>
+                  <div className='border-b border-border mb-4'></div> */}
+            {/* skill list */}
+            {/* <div>
+                    {getData(skillData, 'skills').data.map(
+                      (item, index) => {
+                        const { name } = item;
+                        return (
+                          <div
+                            className='w-2/4 text-center xl:text-left mx-auto xl:mx-0'
+                            key={index}
+                          >
+                            <div className='font-medium'>{name}</div>
+                          </div>
+                        );
+                      }
+                    )}
+                  </div> */}
+            {/* </div> */}
+            {/* tools */}
+            {/* <div>
+                  <h4 className='text-xl font-semibold mb-2 xl:text-left'>
+                    Tools
+                  </h4>
+                  <div className='border-b border-border mb-4'></div>
+                  <div className='flex gap-x-8 justify-center xl:justify-start'>
+                    {getData(skillData, 'tools').data.map((item, index) => {
+                      const { imgPath } = item;
+                      return (
+                        <div key={index}>
+                          <Image
+                            src={imgPath}
+                            width={48}
+                            height={48}
+                            alt=''
+                            priority
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div> */}
+            {/* </div> */}
+            {/* <div>
                     <h3 className='h3 mb-8 text-center xl:text-left'>
                       My Awesome Journey
                     </h3>
-                    {/* experience & education wrapper */}
                     <div className='grid md:grid-cols-2 gap-y-8'>
-                      {/* experience */}
                       <div className='flex flex-col gap-y-6'>
                         <div className='flex gap-x-4 items-center text-[22px] text-primary'>
                           <Briefcase />
@@ -206,7 +274,6 @@ const About = () => {
                             {getData(qualificationData, 'experience').title}
                           </h4>
                         </div>
-                        {/* list */}
                         <div className='flex flex-col gap-y-8'>
                           {getData(qualificationData, 'experience').data.map(
                             (item, index) => {
@@ -233,7 +300,6 @@ const About = () => {
                           )}
                         </div>
                       </div>
-                      {/* education */}
                       <div className='flex flex-col gap-y-6'>
                         <div className='flex gap-x-4 items-center text-[22px] text-primary'>
                           <GraduationCap size={28} />
@@ -241,7 +307,6 @@ const About = () => {
                             {getData(qualificationData, 'education').title}
                           </h4>
                         </div>
-                        {/* list */}
                         <div className='flex flex-col gap-y-8'>
                           {getData(qualificationData, 'education').data.map(
                             (item, index) => {
@@ -269,61 +334,8 @@ const About = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </TabsContent>
-                {/* skills */}
-                <TabsContent value='skills'>
-                  <div className='text-center xl:text-left'>
-                    <h3 className='h3 mb-8'>What I Use Everyday</h3>
-                    {/* skills */}
-                    <div className='mb-16'>
-                      <h4 className='text-xl font-semibold mb-2'>Skills</h4>
-                      <div className='border-b border-border mb-4'></div>
-                      {/* skill list */}
-                      <div>
-                        {getData(skillData, 'skills').data.map(
-                          (item, index) => {
-                            const { name } = item;
-                            return (
-                              <div
-                                className='w-2/4 text-center xl:text-left mx-auto xl:mx-0'
-                                key={index}
-                              >
-                                <div className='font-medium'>{name}</div>
-                              </div>
-                            );
-                          }
-                        )}
-                      </div>
-                    </div>
-                    {/* tools */}
-                    <div>
-                      <h4 className='text-xl font-semibold mb-2 xl:text-left'>
-                        Tools
-                      </h4>
-                      <div className='border-b border-border mb-4'></div>
-                      {/* tool list */}
-                      <div className='flex gap-x-8 justify-center xl:justify-start'>
-                        {getData(skillData, 'tools').data.map((item, index) => {
-                          const { imgPath } = item;
-                          return (
-                            <div key={index}>
-                              <Image
-                                src={imgPath}
-                                width={48}
-                                height={48}
-                                alt=''
-                                priority
-                              />
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </TabsContent>
-              </div>
-            </Tabs>
+                  </div> */}
+            {/* </div> */}
           </div>
         </div>
       </div>
