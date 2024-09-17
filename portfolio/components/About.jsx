@@ -107,13 +107,13 @@ const skillData = [
 const About = () => {
   return (
     <section className='xl:h-[860px] pb-12 xl:py-24'>
-      <div className='container mx-auto px-40'>
+      <div className='container mx-auto px-0 xl:px-24'>
         <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
           About me
         </h2>
-        <div className='grid grid-cols-1 px-16 xl:grid-cols-5 xl:px-0 gap-x-8'>
+        <div className='grid grid-cols-1 px-16 xl:grid-cols-5 xl:px-0 gap-x-8 gap-y-12'>
           <div
-            className='col-span-3'
+            className='col-span-1 xl:col-span-3'
           >
             <h3 className='h3 mb-4 text-center'>
               Introduction
@@ -122,7 +122,7 @@ const About = () => {
               I started programming in 2018 in technical high school, and I have been working as a programmer since the end of 2021. I have
               always been passionate about technology and programming, initially fascinated by the power that programming alone gives us,
               and later by the way we design, build, and maintain software, applying the necessary business rules and impacting our client's
-              life. I am also driven by challenges, work, and goals, and I am constantly developing myself with projects and courses to become
+              life. I am also driven by challenges, work, and goals, and I am constantly developing myself with books, projects and courses to become
               a more well-qualified and prepared professional, in addition to adding knowledge to my team.
             </p>
             <div className='flex flex-col gap-y-2'>
@@ -133,7 +133,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className='col-span-2 text-justify'>
+          <div className='col-span-1 xl:col-span-2 text-justify'>
             <h3 className='h3 mb-4 text-center'>
               Skills
             </h3>
