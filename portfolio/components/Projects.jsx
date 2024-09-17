@@ -105,8 +105,7 @@ const Projects = () => {
   });
 
   return (
-    // <section className='min-h-screen pt-12'>
-    <section className='container mx-auto mt-12'>
+    <section className='container mx-auto mt-40'>
       <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
         My Projects
       </h2>

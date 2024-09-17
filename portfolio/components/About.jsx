@@ -46,48 +46,6 @@ const infoData = [
   },
 ];
 
-const qualificationData = [
-  {
-    title: 'education',
-    data: [
-      {
-        university: 'Example University',
-        qualification: 'Bachelor of Science',
-        years: '2015 - 2018',
-      },
-      {
-        university: 'Another University',
-        qualification: 'Master of Arts',
-        years: '2019 - 2021',
-      },
-      {
-        university: 'Yet Another University',
-        qualification: 'Ph.D in Computer Science',
-        years: '2021 - 2025',
-      },
-    ],
-  },
-  {
-    title: 'experience',
-    data: [
-      {
-        company: 'ABC Inc.',
-        role: 'Software Engineer',
-        years: '2018 - 2020',
-      },
-      {
-        company: 'XYZ Corporation',
-        role: 'Senior Developer',
-        years: '2020 - 2022',
-      },
-      {
-        company: 'Tech Innovators',
-        role: 'Lead Developer',
-        years: '2022 - Present',
-      },
-    ],
-  },
-];
 
 const skillData = [
   {
