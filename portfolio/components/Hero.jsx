@@ -25,7 +25,7 @@ const Hero = () => {
             </div>
             <h1 className='h1 mb-4 text-center'>Hello, my name is Dhomini Rabelo</h1>
             <p className='subtitle max-w-[490px] mx-auto xl:mx-0 text-center w-full'>
-              I'm a Brazilian Full Stack Developer with a huge passion and experience in big companies. I love to learn new subjects and technologies,
+              I'm a Brazilian Full Stack Developer with a huge experience in big companies. I love to learn new subjects and technologies,
               and I'm always looking for new challenges.
             </p>
             <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12'>
