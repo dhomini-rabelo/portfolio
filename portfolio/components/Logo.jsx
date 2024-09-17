@@ -4,7 +4,14 @@ import Image from 'next/image';
 const Logo = () => {
   return (
     <Link href='/'>
-      <Image src='/logo.svg' width={54} height={54} priority alt='' />
+      <Image
+        src='/header/me.jpg'
+        width={72}
+        height={72}
+        priority
+        alt="Owner's portfolio photo"
+        className="block rounded-full border-4 border-transparent outline outline-2 outline-primary"
+      />
     </Link>
   );
 };
