@@ -106,7 +106,9 @@ const Experience = () => {
   };
 
   return (
-    <section className='container flex flex-col gap-y-6 px-0 xl:px-24 mt-12'>
+    <section
+      id='experiences'
+      className='container flex flex-col gap-y-6 px-0 xl:px-24 mt-12'>
       <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
         Experiences
       </h2>

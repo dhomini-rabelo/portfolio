@@ -105,7 +105,9 @@ const Projects = () => {
   });
 
   return (
-    <section className='container mx-auto mt-40'>
+    <section
+      id='projects'
+      className='container mx-auto mt-40'>
       <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
         My Projects
       </h2>

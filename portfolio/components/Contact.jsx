@@ -10,7 +10,9 @@ import Link from 'next/link';
 
 const Contact = () => {
   return (
-    <section className='container mx-auto'>
+    <section
+      id='contact'
+      className='container mx-auto'>
       {/* text & illustration */}
       <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
         Contact

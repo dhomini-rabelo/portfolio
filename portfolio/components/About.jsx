@@ -74,7 +74,9 @@ const About = () => {
   return (
     <section className='xl:h-[860px] pb-12 xl:py-24'>
       <div className='container mx-auto px-0 xl:px-24'>
-        <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
+        <h2
+          id='about'
+          className='section-title mb-8 xl:mb-16 text-center mx-auto'>
           About me
         </h2>
         <div className='grid grid-cols-1 px-16 xl:grid-cols-5 xl:px-0 gap-x-8 gap-y-12'>

@@ -1,5 +1,5 @@
 // link (next js)
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 
 // next hooks
 import { usePathname } from 'next/navigation';
@@ -8,9 +8,10 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 const links = [
-  { path: '/', name: 'home' },
-  { path: '/projects', name: 'my projects' },
-  { path: '/contact', name: 'contact' },
+  { path: 'about', name: 'About', offset: -200, },
+  { path: 'experiences', name: 'Experiences', offset: -150, },
+  { path: 'projects', name: 'Projects', offset: -150, },
+  { path: 'contact', name: 'Contact', offset: -200, },
 ];
 
 const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
@@ -20,19 +21,21 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
       {links.map((link, index) => {
         return (
           <Link
-            href={link.path}
+            to={link.path}
+            smooth={true}
+            spy={true}
+            offset={link.offset}
+            duration={500}
             key={index}
-            className={`capitalize ${linkStyles}`}
+            className={`capitalize ${linkStyles} cursor-pointer`}
           >
-            {link.path === path && (
-              <motion.span
-                initial={{ y: '-100%' }}
-                animate={{ y: 0 }}
-                transition={{ type: 'tween' }}
-                layoutId='underline'
-                className={`${underlineStyles}`}
-              />
-            )}
+            {/* <motion.span
+              initial={{ y: '-100%' }}
+              animate={{ y: 0 }}
+              transition={{ type: 'tween' }}
+              layoutId='underline'
+              className={`${underlineStyles} not:active:opacity-0`}
+            /> */}
             {link.name}
           </Link>
         );
