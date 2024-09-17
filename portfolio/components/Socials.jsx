@@ -5,31 +5,23 @@ import {
   RiLinkedinFill,
   RiGithubFill,
   RiFacebookFill,
-  RiInstagramFill,
+  RiTelegramFill,
 } from 'react-icons/ri';
 
 import Link from 'next/link';
 
 const icons = [
   {
-    path: '/',
-    name: <RiYoutubeFill />,
-  },
-  {
-    path: '/',
+    path: 'https://www.linkedin.com/in/dhomini-rabelo/',
     name: <RiLinkedinFill />,
   },
   {
-    path: '/',
+    path: 'https://github.com/dhomini-rabelo',
     name: <RiGithubFill />,
   },
   {
-    path: '/',
-    name: <RiFacebookFill />,
-  },
-  {
-    path: '/',
-    name: <RiInstagramFill />,
+    path: 'https://t.me/fael_07',
+    name: <RiTelegramFill />,
   },
 ];
 
@@ -38,7 +30,11 @@ const Socials = ({ containerStyles, iconsStyles }) => {
     <div className={`${containerStyles}`}>
       {icons.map((icon, index) => {
         return (
-          <Link href={icon.path} key={index}>
+          <Link
+            key={index}
+            href={icon.path}
+            target='_blank'
+          >
             <div className={`${iconsStyles}`}>{icon.name}</div>
           </Link>
         );
