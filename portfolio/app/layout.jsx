@@ -17,6 +17,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning>
+      <header>
+        <link rel='icon' href='/briefcase.svg' type='image/svg+xml' />
+        <title>Dhomini Rabelo CV</title>
+      </header>
       <body className={outfit.className}>
         <ThemeProvider attribute='class' defaultTheme='light'>
           <Header />
