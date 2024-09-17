@@ -1,6 +1,12 @@
-import { MailIcon, HomeIcon, PhoneCall } from 'lucide-react';
+import { MailIcon } from 'lucide-react';
+import {
+  RiLinkedinFill,
+  RiTelegramFill,
+} from 'react-icons/ri';
 // components
 import Form from '@/components/Form';
+import { FiExternalLink } from "react-icons/fi";
+import Link from 'next/link';
 
 const Contact = () => {
   return (
@@ -16,17 +22,36 @@ const Contact = () => {
           {/* mail */}
           <div className='flex items-center gap-x-8'>
             <MailIcon size={18} className='text-primary' />
-            <div>dhominirabelo@gmail.com</div>
+            <Link
+              target='_blank'
+              href='mailto:dhominirabelo@gmail.com'
+              className='flex items-center gap-x-2'
+            >
+              dhominirabelo@gmail.com
+              <FiExternalLink size={18} className='text-primary' />
+            </Link>
           </div>
-          {/* address */}
           <div className='flex items-center gap-x-8'>
-            <HomeIcon size={18} className='text-primary' />
-            <div>São Luís, Brazil</div>
+            <RiLinkedinFill size={18} className='text-primary' />
+            <Link
+              target='_blank'
+              href='https://www.linkedin.com/in/dhomini-rabelo/'
+              className='flex items-center gap-x-2'
+            >
+              Dhomini Rabelo
+              <FiExternalLink size={18} className='text-primary' />
+            </Link>
           </div>
-          {/* phone */}
           <div className='flex items-center gap-x-8'>
-            <PhoneCall size={18} className='text-primary' />
-            <div>+55 98 99981-1199</div>
+            <RiTelegramFill size={18} className='text-primary' />
+            <Link
+              target='_blank'
+              href='https://t.me/fael_07'
+              className='flex items-center gap-x-2'
+            >
+              Dhomini Rabelo
+              <FiExternalLink size={18} className='text-primary' />
+            </Link>
           </div>
         </div>
         <Form />

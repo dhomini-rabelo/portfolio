@@ -1,6 +1,13 @@
 import Image from 'next/image';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-
+import {
+  RiYoutubeFill,
+  RiLinkedinFill,
+  RiGithubFill,
+  RiFacebookFill,
+  RiTelegramFill,
+} from 'react-icons/ri';
+import { FiExternalLink } from "react-icons/fi";
 import {
   User2,
   MailIcon,
@@ -10,6 +17,7 @@ import {
   Calendar,
   Briefcase,
 } from 'lucide-react';
+import Link from 'next/link';
 
 const infoData = [
   {
@@ -125,11 +133,40 @@ const About = () => {
               life. I am also driven by challenges, work, and goals, and I am constantly developing myself with books, projects and courses to become
               a more well-qualified and prepared professional, in addition to adding knowledge to my team.
             </p>
-            <div className='flex flex-col gap-y-2'>
-              <div className='text-primary'>Languages</div>
+            <div className='flex flex-col gap-y-2 h-full'>
+              <div className='text-primary'>Personal Info and Social Medias</div>
               <div className='border-b border-border'></div>
-              <div>
-                English, Portuguese.
+              <div className='grow grid xl:grid-cols-2 max-h-[6rem]'>
+                <div className='flex items-center gap-x-8'>
+                  <RiLinkedinFill size={18} className='text-primary' />
+                  <Link
+                    target='_blank'
+                    href='https://www.linkedin.com/in/dhomini-rabelo/'
+                    className='flex items-center gap-x-2'
+                  >
+                    Dhomini Rabelo
+                    <FiExternalLink size={18} className='text-primary' />
+                  </Link>
+                </div>
+                <div className='flex items-center gap-x-8'>
+                  <RiGithubFill size={18} className='text-primary' />
+                  <Link
+                    target='_blank'
+                    href='https://github.com/dhomini-rabelo'
+                    className='flex items-center gap-x-2'
+                  >
+                    dhomini-rabelo
+                    <FiExternalLink size={18} className='text-primary' />
+                  </Link>
+                </div>
+                <div className='flex items-center gap-x-8'>
+                  <HomeIcon size={18} className='text-primary' />
+                  <div>São Luís, Brazil</div>
+                </div>
+                <div className='flex items-center gap-x-8'>
+                  <PhoneCall size={18} className='text-primary' />
+                  <div>+55 98 99981-1199</div>
+                </div>
               </div>
             </div>
           </div>
