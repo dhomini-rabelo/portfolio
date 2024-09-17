@@ -1,9 +1,8 @@
 // components
 import About from '@/components/About';
 import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import Work from '@/components/Work';
 import Reviews from '@/components/Reviews';
+import Projects from '@/components/Projects';
 import Cta from '@/components/Cta';
 
 export default function Home() {
@@ -11,9 +10,10 @@ export default function Home() {
     <main>
       <Hero />
       <About />
-      <Services />
-      <Work />
-      <Reviews />
+      {/* <Services /> */}
+      {/* <Work /> */}
+      <Projects />
+      {/* <Reviews /> */}
       <Cta />
     </main>
   );
