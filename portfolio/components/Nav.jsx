@@ -14,7 +14,7 @@ const links = [
   { path: 'contact', name: 'Contact', offset: -200, delay: 800 },
 ];
 
-const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
+const Nav = ({ closeSheet = null, containerStyles, linkStyles, underlineStyles }) => {
   const path = usePathname();
   return (
     <nav className={`${containerStyles}`}>
@@ -28,6 +28,7 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
             duration={link.delay}
             key={index}
             className={`capitalize ${linkStyles} cursor-pointer`}
+            onClick={closeSheet}
           >
             {/* <motion.span
               initial={{ y: '-100%' }}
