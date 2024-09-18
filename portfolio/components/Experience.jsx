@@ -108,8 +108,9 @@ const Experience = () => {
   return (
     <section
       id='experiences'
+      className='py-12 xl:py-24'
     >
-      <div className="container flex flex-col gap-y-6 xl:px-24 pt-48">
+      <div className="container flex flex-col gap-y-6 xl:px-24">
 
         <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
           Experiences

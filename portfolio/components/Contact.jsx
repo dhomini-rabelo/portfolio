@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <section
       id='contact'
-      className='container mx-auto pb-24 pt-32'
+      className='container mx-auto py-12 xl:py-24'
     >
       {/* text & illustration */}
       <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>

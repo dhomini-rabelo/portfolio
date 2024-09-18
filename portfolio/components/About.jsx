@@ -72,7 +72,7 @@ const skillData = [
 
 const About = () => {
   return (
-    <section id='about' className='pb-96 lg:py-32'>
+    <section id='about' className='py-28 xl:py-56'>
       <div className='container mx-auto px-0 lg:px-24'>
         <h2
           className='section-title mb-8 lg:mb-16 text-center mx-auto'>
@@ -95,7 +95,7 @@ const About = () => {
             <div className='flex flex-col gap-y-2 h-full'>
               <div className='text-primary'>Personal Info and Social Medias</div>
               <div className='border-b border-border'></div>
-              <div className='grow grid sm:grid-cols-2 max-h-[6rem]'>
+              <div className='grow grid sm:grid-cols-2 max-h-[6rem] gap-y-2'>
                 <div className='flex items-center gap-x-8'>
                   <RiLinkedinFill size={18} className='text-primary' />
                   <Link

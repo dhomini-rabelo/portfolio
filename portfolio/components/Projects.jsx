@@ -112,7 +112,7 @@ const Projects = () => {
   return (
     <section
       id='projects'
-      className='container mx-auto pt-48'>
+      className='container mx-auto py-12 xl:py-24'>
       <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
         My Projects
       </h2>
