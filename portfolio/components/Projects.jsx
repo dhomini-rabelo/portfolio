@@ -5,13 +5,13 @@ import ProjectCard from '@/components/ProjectCard';
 
 const projectData = [
   {
-    image: '/work/3.png',
-    category: 'react js',
-    name: 'Nexa Website',
+    image: '/projects/ecommerce.png',
+    category: 'fullstack',
+    name: 'Ecommerce Website',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quis.',
-    link: '/',
-    github: '/',
+    link: 'https://remotely-store.vercel.app',
+    github: 'https://github.com/dhomini-rabelo/remotely-store',
   },
   {
     image: '/work/4.png',
@@ -128,7 +128,7 @@ const Projects = () => {
           })}
         </TabsList>
         {/* tabs content */}
-        <div className='text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4'>
+        <div className='text-lg xl:mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4'>
           {filteredProjects.map((project, index) => {
             return (
               <TabsContent value={category} key={index}>
