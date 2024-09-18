@@ -20,7 +20,7 @@ const Contact = () => {
       {/* info text & form */}
       <div className='grid xl:grid-cols-2 mb-24 xl:mb-32'>
         {/* info text */}
-        <div className='flex flex-col gap-y-4 xl:gap-y-14 mb-12 xl:mb-24 text-base xl:text-lg'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-y-4 xl:gap-y-14 mb-12 xl:mb-24 text-base xl:text-lg'>
           {/* mail */}
           <div className='flex items-center gap-x-8'>
             <MailIcon size={18} className='text-primary' />
