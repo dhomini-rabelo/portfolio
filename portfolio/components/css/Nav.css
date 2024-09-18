@@ -1,0 +1,6 @@
+.nav-link-motion.active > span {
+    display: block !important;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    width: 75%;
+}

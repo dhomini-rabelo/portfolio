@@ -72,10 +72,9 @@ const skillData = [
 
 const About = () => {
   return (
-    <section className='pb-12 lg:py-24'>
+    <section id='about' className='pb-96 lg:py-32'>
       <div className='container mx-auto px-0 lg:px-24'>
         <h2
-          id='about'
           className='section-title mb-8 lg:mb-16 text-center mx-auto'>
           About me
         </h2>

@@ -109,7 +109,7 @@ const Experience = () => {
     <section
       id='experiences'
     >
-      <div className="container flex flex-col gap-y-6 xl:px-24 mt-12">
+      <div className="container flex flex-col gap-y-6 xl:px-24 pt-48">
 
         <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
           Experiences
