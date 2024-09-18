@@ -10,7 +10,6 @@ import { useState } from 'react';
 
 const Form = () => {
   const [formState, setFormState] = useState({
-    isLoading: false,
     wasSentSuccessfully: null,
   });
 
@@ -21,10 +20,6 @@ const Form = () => {
       action={
         async (formData) => {
           try {
-            setFormState(prev => ({
-              ...prev,
-              isLoading: true,
-            }))
             const { data, error } = await sendEmail(formData);
             const wasSentSuccessfully = !error && data.status === 200;
 
@@ -36,13 +31,11 @@ const Form = () => {
 
             setFormState(prev => ({
               ...prev,
-              isLoading: false,
               wasSentSuccessfully,
             }))
           } catch {
             setFormState(prev => ({
               ...prev,
-              isLoading: false,
               wasSentSuccessfully: false,
             }))
           }
@@ -68,7 +61,7 @@ const Form = () => {
           required placeholder='Type Your Message Here.' />
         <MessageSquare className='absolute top-4 right-6' size={20} />
       </div>
-      <Button disabled={formState.isLoading} className='flex items-center gap-x-1 w-full'>
+      <Button className='flex items-center gap-x-1 w-full'>
         Let's Talk
         <ArrowRightIcon size={20} />
       </Button>
