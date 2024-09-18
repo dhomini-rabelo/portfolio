@@ -8,10 +8,10 @@ import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 
 const links = [
-  { path: 'about', name: 'About', offset: -200, },
-  { path: 'experiences', name: 'Experiences', offset: -150, },
-  { path: 'projects', name: 'Projects', offset: -150, },
-  { path: 'contact', name: 'Contact', offset: -200, },
+  { path: 'about', name: 'About', offset: -200, delay: 500 },
+  { path: 'experiences', name: 'Experiences', offset: -150, delay: 600 },
+  { path: 'projects', name: 'Projects', offset: -150, delay: 700 },
+  { path: 'contact', name: 'Contact', offset: -200, delay: 800 },
 ];
 
 const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
@@ -25,7 +25,7 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
             smooth={true}
             spy={true}
             offset={link.offset}
-            duration={500}
+            duration={link.delay}
             key={index}
             className={`capitalize ${linkStyles} cursor-pointer`}
           >

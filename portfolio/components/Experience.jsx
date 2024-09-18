@@ -108,48 +108,51 @@ const Experience = () => {
   return (
     <section
       id='experiences'
-      className='container flex flex-col gap-y-6 px-0 xl:px-24 mt-12'>
-      <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
-        Experiences
-      </h2>
-      <div className='flex gap-x-4 items-center text-[22px] text-primary'>
-        <Briefcase />
-        <h4 className='capitalize font-medium'>
-          Jobs
-        </h4>
-      </div>
-      <div className='flex flex-col gap-y-8'>
-        {getData(qualificationData, 'experience').data.map(
-          (item, index) => {
-            const { company, time, description } = item;
-            return (
-              <div className='flex gap-x-8 w-full' key={index}>
-                <div className='h-[84px] w-[1px] bg-border relative ml-2'>
-                  <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px]'></div>
-                </div>
-                <div>
-                  <div className='font-semibold text-xl leading-none mb-2'>
-                    {company}
-                  </div>
-                  <div className='text-lg leading-none text-muted-foreground mb-4'>
-                    {time}
-                  </div>
-                  <div className='text-base font-medium text-justify flex flex-col gap-y-4'>
-                    {
+    >
+      <div className="container flex flex-col gap-y-6 xl:px-24 mt-12">
 
-                      description.split('•').slice(1).map((item, index) => {
-                        return (
-                          <div key={index}> • {item}</div>
-                        );
-                      })
+        <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
+          Experiences
+        </h2>
+        <div className='flex gap-x-4 items-center text-[22px] text-primary'>
+          <Briefcase />
+          <h4 className='capitalize font-medium'>
+            History
+          </h4>
+        </div>
+        <div className='flex flex-col gap-y-8'>
+          {getData(qualificationData, 'experience').data.map(
+            (item, index) => {
+              const { company, time, description } = item;
+              return (
+                <div className='flex gap-x-8 w-full' key={index}>
+                  <div className='h-[84px] w-[1px] bg-border relative ml-2'>
+                    <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px]'></div>
+                  </div>
+                  <div>
+                    <div className='font-semibold text-xl leading-none mb-2'>
+                      {company}
+                    </div>
+                    <div className='text-lg leading-none text-muted-foreground mb-4'>
+                      {time}
+                    </div>
+                    <div className='text-base font-medium text-justify flex flex-col gap-y-4'>
+                      {
 
-                    }
+                        description.split('•').slice(1).map((item, index) => {
+                          return (
+                            <p key={index}> • {item}</p>
+                          );
+                        })
+
+                      }
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          }
-        )}
+              );
+            }
+          )}
+        </div>
       </div>
     </section>
   );

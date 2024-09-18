@@ -23,11 +23,10 @@ const Header = () => {
 
   return (
     <header
-      className={`${
-        header
-          ? 'py-4 bg-white shadow-lg dark:bg-accent'
-          : 'py-6 dark:bg-transparent'
-      } sticky top-0 z-30 transition-all ${pathname === '/' && 'bg-[#fef9f5]'}`}
+      className={`${header
+        ? 'py-4 bg-white shadow-lg dark:bg-accent'
+        : 'py-6 dark:bg-transparent'
+        } sticky top-0 z-30 transition-all ${pathname === '/' && 'bg-[#fef9f5]'}`}
     >
       <div className='container mx-auto'>
         <div className='flex justify-between items-center'>
@@ -35,13 +34,13 @@ const Header = () => {
           <div className='flex items-center gap-x-6'>
             {/* nav */}
             <Nav
-              containerStyles='hidden xl:flex gap-x-8 items-center'
+              containerStyles='hidden lg:flex gap-x-8 items-center'
               linkStyles='relative hover:text-primary transition-all'
               underlineStyles='absolute left-0 top-full h-[2px] bg-primary w-full'
             />
             <ThemeToggler />
             {/* mobile nav */}
-            <div className='xl:hidden'>
+            <div className='lg:hidden'>
               <MobileNav />
             </div>
           </div>

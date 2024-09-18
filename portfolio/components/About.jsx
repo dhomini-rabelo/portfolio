@@ -72,16 +72,16 @@ const skillData = [
 
 const About = () => {
   return (
-    <section className='xl:h-[860px] pb-12 xl:py-24'>
-      <div className='container mx-auto px-0 xl:px-24'>
+    <section className='pb-12 lg:py-24'>
+      <div className='container mx-auto px-0 lg:px-24'>
         <h2
           id='about'
-          className='section-title mb-8 xl:mb-16 text-center mx-auto'>
+          className='section-title mb-8 lg:mb-16 text-center mx-auto'>
           About me
         </h2>
-        <div className='grid grid-cols-1 px-16 xl:grid-cols-5 xl:px-0 gap-x-8 gap-y-12'>
+        <div className='grid grid-cols-1 px-16 lg:grid-cols-5 lg:px-0 gap-x-8 gap-y-20'>
           <div
-            className='col-span-1 xl:col-span-3'
+            className='col-span-1 lg:col-span-3'
           >
             <h3 className='h3 mb-4 text-center'>
               Introduction
@@ -96,7 +96,7 @@ const About = () => {
             <div className='flex flex-col gap-y-2 h-full'>
               <div className='text-primary'>Personal Info and Social Medias</div>
               <div className='border-b border-border'></div>
-              <div className='grow grid xl:grid-cols-2 max-h-[6rem]'>
+              <div className='grow grid sm:grid-cols-2 max-h-[6rem]'>
                 <div className='flex items-center gap-x-8'>
                   <RiLinkedinFill size={18} className='text-primary' />
                   <Link
@@ -130,7 +130,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className='col-span-1 xl:col-span-2 text-justify'>
+          <div className='col-span-1 lg:col-span-2 text-justify'>
             <h3 className='h3 mb-4 text-center'>
               Skills
             </h3>
@@ -164,38 +164,38 @@ const About = () => {
               </span>
             </div>
             {/* <Tabs defaultValue='skills'> */}
-            {/* <TabsList className='w-full mx-auto grid xl:grid-cols-2 xl:max-w-[520px] xl:border dark:border-none'>
-                <TabsTrigger className='w-[162px] xl:w-auto' value='personal'>
+            {/* <TabsList className='w-full mx-auto grid lg:grid-cols-2 lg:max-w-[520px] lg:border dark:border-none'>
+                <TabsTrigger className='w-[162px] lg:w-auto' value='personal'>
                   Personal Info
                 </TabsTrigger>
-                <TabsTrigger className='w-[162px] xl:w-auto' value='skills'>
+                <TabsTrigger className='w-[162px] lg:w-auto' value='skills'>
                   Skills
                 </TabsTrigger>
                 <TabsTrigger
-                  className='w-[162px] xl:w-auto'
+                  className='w-[162px] lg:w-auto'
                   value='qualifications'
                 >
                   Qualifications
                 </TabsTrigger>
               </TabsList> */}
             {/* tabs content */}
-            {/* <div className='text-lg mt-4 xl:mt-8'> */}
+            {/* <div className='text-lg mt-4 lg:mt-8'> */}
             {/* personal */}
             {/* <TabsContent value='personal'>
-                  <div className='text-center xl:text-left'>
+                  <div className='text-center lg:text-left'>
                     <h3 className='h3 mb-4'>
                       Unmatched Service Quality for Over 10 Years
                     </h3>
-                    <p className='subtitle max-w-xl mx-auto xl:mx-0'>
+                    <p className='subtitle max-w-xl mx-auto lg:mx-0'>
                       I specialize in crafting intuitive websites with
                       cutting-edge technology, delivering dynamic and engaging
                       user experiences.
                     </p>
-                    <div className='grid xl:grid-cols-2 gap-4 mb-12'>
+                    <div className='grid lg:grid-cols-2 gap-4 mb-12'>
                       {infoData.map((item, index) => {
                         return (
                           <div
-                            className='flex items-center gap-x-4 mx-auto xl:mx-0'
+                            className='flex items-center gap-x-4 mx-auto lg:mx-0'
                             key={index}
                           >
                             <div className='text-primary'>{item.icon}</div>
@@ -213,7 +213,7 @@ const About = () => {
                 </TabsContent> */}
             {/* qualifications */}
             {/* skills */}
-            {/* <div className='text-center xl:text-left'> */}
+            {/* <div className='text-center lg:text-left'> */}
             {/* skills */}
             {/* <div className='mb-16'> */}
             {/* <h4 className='text-xl font-semibold mb-2'>Skills</h4>
@@ -225,7 +225,7 @@ const About = () => {
                         const { name } = item;
                         return (
                           <div
-                            className='w-2/4 text-center xl:text-left mx-auto xl:mx-0'
+                            className='w-2/4 text-center lg:text-left mx-auto lg:mx-0'
                             key={index}
                           >
                             <div className='font-medium'>{name}</div>
@@ -237,11 +237,11 @@ const About = () => {
             {/* </div> */}
             {/* tools */}
             {/* <div>
-                  <h4 className='text-xl font-semibold mb-2 xl:text-left'>
+                  <h4 className='text-xl font-semibold mb-2 lg:text-left'>
                     Tools
                   </h4>
                   <div className='border-b border-border mb-4'></div>
-                  <div className='flex gap-x-8 justify-center xl:justify-start'>
+                  <div className='flex gap-x-8 justify-center lg:justify-start'>
                     {getData(skillData, 'tools').data.map((item, index) => {
                       const { imgPath } = item;
                       return (
@@ -260,7 +260,7 @@ const About = () => {
                 </div> */}
             {/* </div> */}
             {/* <div>
-                    <h3 className='h3 mb-8 text-center xl:text-left'>
+                    <h3 className='h3 mb-8 text-center lg:text-left'>
                       My Awesome Journey
                     </h3>
                     <div className='grid md:grid-cols-2 gap-y-8'>

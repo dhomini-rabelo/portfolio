@@ -1,3 +1,6 @@
+'use client';
+
+import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { Download, Send } from 'lucide-react';
@@ -28,12 +31,18 @@ const Hero = () => {
               I'm a Brazilian Full Stack Developer with a huge experience in big companies. I love to learn new subjects and technologies,
               and I'm always looking for new challenges.
             </p>
-            <div className='flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12'>
-              <Link href='/contact'>
+            <div className='flex gap-3 flex-row flex-wrap mx-auto xl:mx-0 mb-12 w-full justify-center items-center'>
+              <ScrollLink
+                to='contact'
+                smooth={true}
+                spy={true}
+                offset={-200}
+                duration={800}
+              >
                 <Button className='gap-x-2'>
                   Contact me <Send size={18} />
                 </Button>
-              </Link>
+              </ScrollLink>
               <Link
                 target='_blank'
                 href='/hero/resume.pdf'
