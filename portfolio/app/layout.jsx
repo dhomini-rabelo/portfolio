@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <link rel='icon' href='/briefcase.svg' type='image/svg+xml' />
       </head>
       <body className={outfit.className}>
-        <ThemeProvider attribute='class' defaultTheme='light'>
+        <ThemeProvider attribute='class' defaultTheme='dark'>
           <Header />
           {children}
           <Footer />
