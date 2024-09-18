@@ -20,13 +20,17 @@ const ProjectCard = ({ project }) => {
           />
           {/* btn links */}
           <div className='flex gap-x-4'>
-            <Link
-              target='_blank'
-              href={project.link}
-              className='bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200'
-            >
-              <Link2Icon className='text-white' />
-            </Link>
+            {
+              project.link && (
+                <Link
+                  target='_blank'
+                  href={project.link}
+                  className='bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200'
+                >
+                  <Link2Icon className='text-white' />
+                </Link>
+              )
+            }
             <Link
               target='_blank'
               href={project.github}
@@ -42,7 +46,7 @@ const ProjectCard = ({ project }) => {
           {project.category}
         </Badge>
         <h4 className='h4 mb-1 text-center'>{project.name}</h4>
-        {/* <p className='text-muted-foreground text-lg'>{project.description}</p> */}
+        <p className='text-muted-foreground text-lg text-center'>{project.description}</p>
       </div>
     </Card>
   );
