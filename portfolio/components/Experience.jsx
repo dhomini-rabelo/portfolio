@@ -1,51 +1,49 @@
-import Image from 'next/image';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
-  RiYoutubeFill,
-  RiLinkedinFill,
-  RiGithubFill,
-  RiFacebookFill,
-  RiTelegramFill,
-} from 'react-icons/ri';
-import { FiExternalLink } from "react-icons/fi";
-import {
-  User2,
-  MailIcon,
-  HomeIcon,
-  PhoneCall,
-  GraduationCap,
-  Calendar,
-  Briefcase,
-} from 'lucide-react';
-import Link from 'next/link';
+import { Briefcase } from "lucide-react";
 
 const qualificationData = [
   {
-    title: 'education',
+    title: "education",
     data: [
       {
-        university: 'Example University',
-        qualification: 'Bachelor of Science',
-        years: '2015 - 2018',
+        university: "Example University",
+        qualification: "Bachelor of Science",
+        years: "2015 - 2018",
       },
       {
-        university: 'Another University',
-        qualification: 'Master of Arts',
-        years: '2019 - 2021',
+        university: "Another University",
+        qualification: "Master of Arts",
+        years: "2019 - 2021",
       },
       {
-        university: 'Yet Another University',
-        qualification: 'Ph.D in Computer Science',
-        years: '2021 - 2025',
+        university: "Yet Another University",
+        qualification: "Ph.D in Computer Science",
+        years: "2021 - 2025",
       },
     ],
   },
   {
-    title: 'experience',
+    title: "experience",
     data: [
       {
-        company: 'ASTRA TECHNOLOGIES',
-        time: '09/2023 - PRESENT',
+        company: "OXBYKES",
+        time: "08/2024 - PRESENT",
+        description: `• E-commerce web development using agile methodology, building the front-end with React and Next. Back-end with Typescript and Express, in addition to other tools like Docker, Postgres, Git, etc.
+
+• Significantly increased company revenue by creating key functionalities, such as selling bicycles that were currently rented. Furthermore, I facilitated and improved sales and rental processes, which included the creation of a new plan model.
+
+• Developed dozens of new functionalities and features to improve workflows, increase security, and facilitate processes for customers, sellers, and system administrators, always maintaining high-quality, well-written, readable, and easily maintainable code.
+
+• Removed bugs through refactoring and the creation of very verbose code, aiming to clearly define how the system should function and ensure that business rules are applied.
+
+• Resolved many security issues in the project, such as data being returned incorrectly or processes and functionalities with serious errors. I was also responsible for adding identity verification to the system, bringing greater confidence to our sellers.
+
+• Worked very closely with the company director, which enabled me to contribute to the initial planning of new functionalities in the project, taking into account current behavior, practicality, better user experience, and a solid solution that will remain in the system for a long time.
+
+• Worked closely with the support team, making corrections, improving the administration system, answering questions, and collecting feedback whenever necessary.`,
+      },
+      {
+        company: "ASTRA TECHNOLOGIES",
+        time: "09/2023 - 08/2024",
         description: ` • Worked on 2 projects using agile methodology. One involved web and mobile development, building front-end and mobile
  with React, React Native, SAAS, Redux, etc. Back-end with Python in a serverless application, along with other AWS tools.
  The other is web-only, and we used Node for the back-end and Next for the front-end; this project is in its initial stage.
@@ -64,8 +62,8 @@ const qualificationData = [
  • In this company, effective communication is necessary; we have presentations a few times a year, and I presented once.`,
       },
       {
-        company: 'INSPECTO AGRI',
-        time: '05/2022 - 09/2023',
+        company: "INSPECTO AGRI",
+        time: "05/2022 - 09/2023",
         description: ` • Web development using agile methodology, building front-end with HTML, CSS, JavaScript, and jQuery. Back-end with
  Python, using the frameworks Django and Django Rest Framework, along with other tools like Docker, Postgres, Git, etc.
  • I joined the company when the system was in a very early stage and was able to develop features that helped bring in
@@ -85,16 +83,16 @@ const qualificationData = [
  knowledge in DDD.`,
       },
       {
-        company: 'FREENLANCER PROJECT',
-        time: '12/2021 - 03/2022',
+        company: "FREENLANCER PROJECT",
+        time: "12/2021 - 03/2022",
         description: ` • Development of a website with forms, several pages, an authentication system, and administration using technologies such as
  Django, HTML, CSS, JavaScript, and Python. The website is hosted on Heroku with a custom domain.`,
       },
       {
-        company: 'PERSONAL PROJECTS',
-        time: '07/2018 - PRESENT',
+        company: "PERSONAL PROJECTS",
+        time: "07/2018 - PRESENT",
         description: ` •  I create projects to train, practice and improve my programming skills and the technologies I use. My projects are available on
- my Github profile. You can access one of my projects in section below.`
+ my Github profile. You can access one of my projects in section below.`,
       },
     ],
   },
@@ -106,53 +104,42 @@ const Experience = () => {
   };
 
   return (
-    <section
-      id='experiences'
-      className='py-12 xl:py-24'
-    >
+    <section id="experiences" className="py-12 xl:py-24">
       <div className="container flex flex-col gap-y-6 xl:px-24">
-
-        <h2 className='section-title mb-8 xl:mb-16 text-center mx-auto'>
+        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
           Experiences
         </h2>
-        <div className='flex gap-x-4 items-center text-[22px] text-primary'>
+        <div className="flex gap-x-4 items-center text-[22px] text-primary">
           <Briefcase />
-          <h4 className='capitalize font-medium'>
-            History
-          </h4>
+          <h4 className="capitalize font-medium">History</h4>
         </div>
-        <div className='flex flex-col gap-y-8'>
-          {getData(qualificationData, 'experience').data.map(
-            (item, index) => {
-              const { company, time, description } = item;
-              return (
-                <div className='flex gap-x-8 w-full' key={index}>
-                  <div className='h-[84px] w-[1px] bg-border relative ml-2'>
-                    <div className='w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px]'></div>
+        <div className="flex flex-col gap-y-8">
+          {getData(qualificationData, "experience").data.map((item, index) => {
+            const { company, time, description } = item;
+            return (
+              <div className="flex gap-x-8 w-full" key={index}>
+                <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                  <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px]"></div>
+                </div>
+                <div>
+                  <div className="font-semibold text-xl leading-none mb-2">
+                    {company}
                   </div>
-                  <div>
-                    <div className='font-semibold text-xl leading-none mb-2'>
-                      {company}
-                    </div>
-                    <div className='text-lg leading-none text-muted-foreground mb-4'>
-                      {time}
-                    </div>
-                    <div className='text-base font-medium text-justify flex flex-col gap-y-4'>
-                      {
-
-                        description.split('•').slice(1).map((item, index) => {
-                          return (
-                            <p key={index}> • {item}</p>
-                          );
-                        })
-
-                      }
-                    </div>
+                  <div className="text-lg leading-none text-muted-foreground mb-4">
+                    {time}
+                  </div>
+                  <div className="text-base font-medium text-justify flex flex-col gap-y-4">
+                    {description
+                      .split("•")
+                      .slice(1)
+                      .map((item, index) => {
+                        return <p key={index}> • {item}</p>;
+                      })}
                   </div>
                 </div>
-              );
-            }
-          )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
