@@ -9,7 +9,7 @@ const projectData = [
     category: "CHATBOT",
     name: "Seja Adimplente AI Chatbot",
     description: "Chatbot for financial Management",
-    github: "https://github.com/dhomini-rabelo/movie-api",
+    github: "https://github.com/dhomini-rabelo/seja-adimplente-chatbot",
   },
   {
     image: "/projects/nearby.jpeg",
