@@ -5,8 +5,16 @@ import { useState } from "react";
 
 const projectData = [
   {
+    image: "/projects/mdnotes.png",
+    category: "SAAS",
+    name: "MD Notes",
+    description: "Markdown Notes with AI and voice commands",
+    github: "https://github.com/dhomini-rabelo/mdnotes-public",
+    link: "https://d189amvpwtmhw6.cloudfront.net/",
+  },
+  {
     image: "/projects/seja-adimplente.png",
-    category: "CHATBOT",
+    category: "SAAS",
     name: "Seja Adimplente AI Chatbot",
     description: "Chatbot for financial Management",
     github: "https://github.com/dhomini-rabelo/seja-adimplente-chatbot",

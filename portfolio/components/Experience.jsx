@@ -25,8 +25,27 @@ const qualificationData = [
     title: "experience",
     data: [
       {
+        company: "MCtech Consultoria",
+        time: "03/2025 - PRESENT",
+        description: `• Web development of a system for monitoring and analyzing machine performance in industries using agile methodology, building the front-end with React. Back-end with Typescript and Nest, as well as other tools such as Docker, Postgres, Git, etc.
+
+ • I fully developed version 2 of the project's main web server, using my learnings and studies on DDD, Clean Architecture, Clean Code, OOP, SOLID, and TDD. Creating code that is consistent, secure, tested, scalable, readable, easy to maintain and that really implements the business rules, which solved the main problem of version 1 which was a tremendous technical debt and a system with many problems to maintain. This new software has increased the company's turnover, as it can now sell a better, more complete solution that works perfectly.
+
+ • I actively participated in planning meetings to develop functionalities and integrations. At the end of the development of the most difficult functionalities, I presented the results, behaviors, and performance.
+
+ • Monitoring data and behaviors in real time, such as connection status, operation and parameters.
+
+ • Implementing dozens of extremely complex business rules for the industrial sector, orchestrating interaction between dozens of entities, with dynamic behavioral logics and performance criteria.
+
+ • I used RabbitMQ and an API Gateway to integrate with other microservices in the system, such as the data collection and monitoring microservice, ensuring consistency, scalability and security.
+
+ • Creation of websockets to monitor connections, data and performance in real time, implementing all possible events. 
+
+• Development of integration with a websocket on the application's front-end to display data in real time, taking into account possible events. In addition to developing some screens and functionalities for the front-end.`,
+      },
+      {
         company: "OXBYKES",
-        time: "08/2024 - PRESENT",
+        time: "08/2024 - 03/2025",
         description: `• E-commerce web development using agile methodology, building the front-end with React and Next. Back-end with Typescript and Express, in addition to other tools like Docker, Postgres, Git, etc.
 
 • Significantly increased company revenue by creating key functionalities, such as selling bicycles that were currently rented. Furthermore, I facilitated and improved sales and rental processes, which included the creation of a new plan model.
