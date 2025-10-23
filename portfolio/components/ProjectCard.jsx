@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Card, CardHeader } from './ui/card';
 import { Github, Link2Icon } from 'lucide-react';
 import { Badge } from './ui/badge';
+import { FiExternalLink } from 'react-icons/fi';
 
 const ProjectCard = ({ project }) => {
   return (
@@ -20,17 +21,6 @@ const ProjectCard = ({ project }) => {
           />
           {/* btn links */}
           <div className='flex gap-x-4'>
-            {
-              project.link && (
-                <Link
-                  target='_blank'
-                  href={project.link}
-                  className='bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200'
-                >
-                  <Link2Icon className='text-white' />
-                </Link>
-              )
-            }
             <Link
               target='_blank'
               href={project.github}
@@ -38,15 +28,35 @@ const ProjectCard = ({ project }) => {
             >
               <Github className='text-white' />
             </Link>
+            {project.link && (
+              <Link
+                target='_blank'
+                href={project.link}
+                className='bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200'
+              >
+                <Link2Icon className='text-white' />
+              </Link>
+            )}
           </div>
         </div>
       </CardHeader>
-      <div className='h-full px-8 py-6'>
+      <div className='h-full px-8 py-6 flex flex-col'>
         <Badge className='uppercase text-sm font-medium mb-2 absolute top-4 left-5'>
           {project.category}
         </Badge>
         <h4 className='h4 mb-1 text-center'>{project.name}</h4>
-        <p className='text-muted-foreground text-lg text-center'>{project.description}</p>
+        <p className='text-muted-foreground text-lg text-center mb-4 flex-grow'>{project.description}</p>
+        {project.link && (
+          <div className='flex justify-center'>
+            <Link
+              target='_blank'
+              href={project.link}
+              className='inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md text-sm font-medium transition-colors'
+            >
+              Try out <FiExternalLink className="w-4 h-4" />
+            </Link>
+          </div>
+        )}
       </div>
     </Card>
   );

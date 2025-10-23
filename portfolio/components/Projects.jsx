@@ -10,7 +10,7 @@ const projectData = [
     name: "MD Notes",
     description: "Markdown Notes with AI and voice commands",
     github: "https://github.com/dhomini-rabelo/mdnotes-public",
-    link: "https://d189amvpwtmhw6.cloudfront.net/",
+    link: "https://mdnotesapp.com",
   },
   {
     image: "/projects/seja-adimplente.png",
